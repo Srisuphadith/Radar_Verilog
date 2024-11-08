@@ -1,5 +1,5 @@
 # Radar_VHDL
 <ui>
-<ul>read HC-SR04(ultrasonic distance sensor)</ul>
-<ul>servo rotation</ul>
+<li>read HC-SR04(ultrasonic distance sensor)</li>
+<li>servo rotation</li>
 </ui>
