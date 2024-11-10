@@ -23,7 +23,7 @@ output reg clk2;
   
   always @ (negedge clk)
     begin
-      if(cnt2 < 249)
+      if(cnt2 < 2499)
             begin
               cnt2 <= cnt2 + 1;
             end
@@ -60,6 +60,7 @@ module echo_cnt(ech,count_ech,clk);
     begin
       b = 0;
       count = 0;
+      count_ech = 0;
     end
   always @ (negedge clk)
     begin
@@ -89,5 +90,27 @@ module echo_cnt(ech,count_ech,clk);
   
 endmodule
 
+module distance_cal(count_ech,ech,distance_cm,distance_m);
+  
+  input reg [17:0] count_ech;
+  input reg ech;
+  output reg [10:0] distance_cm;
+  output reg [3:0] distance_m;
+  reg [17:0] S;
+  
+  initial
+    begin
+      distance_cm = 0;
+      distance_m = 0;
+    end
+  
+  always @ (negedge ech)
+    begin
+      #1;
+      //distance unit centimeter
+      distance_cm = (173 * count_ech)/10000;
+      distance_m = distance_cm/100;
+    end
+endmodule
     
   
