@@ -8,6 +8,7 @@ Running placement......
 [20%] Placement Phase 1 completed
 [30%] Placement Phase 2 completed
 WARN  (TA1132) :  'clk' was determined to be a clock but was not created.
+WARN  (TA1132) :  'n98_6' was determined to be a clock but was not created.
 [50%] Placement Phase 3 completed
 Running routing......
 [60%] Routing Phase 0 completed
@@ -27,5 +28,5 @@ Generate file "F:\Radar_VHDL\gowin\ul\impl\pnr\ul.pin.html" completed
 Generate file "F:\Radar_VHDL\gowin\ul\impl\pnr\ul.rpt.html" completed
 Generate file "F:\Radar_VHDL\gowin\ul\impl\pnr\ul.rpt.txt" completed
 Generate file "F:\Radar_VHDL\gowin\ul\impl\pnr\ul.tr.html" completed
-Sun Nov 10 16:59:24 2024
+Sun Nov 10 22:13:00 2024
 

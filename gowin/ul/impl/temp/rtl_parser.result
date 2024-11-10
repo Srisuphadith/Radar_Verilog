@@ -9,27 +9,35 @@
   "SubInsts" : [
    {
     "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "InstLine" : 10,
+    "InstLine" : 13,
     "InstName" : "cv",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 15,
+    "ModuleLine" : 19,
     "ModuleName" : "trigger_cnt"
    },
    {
     "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "InstLine" : 11,
+    "InstLine" : 14,
     "InstName" : "eh",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 57,
+    "ModuleLine" : 61,
     "ModuleName" : "echo_cnt"
    },
    {
     "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "InstLine" : 12,
+    "InstLine" : 15,
     "InstName" : "dis",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 98,
+    "ModuleLine" : 103,
     "ModuleName" : "distance_cal"
+   },
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "InstLine" : 16,
+    "InstName" : "seg",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "ModuleLine" : 124,
+    "ModuleName" : "seg7"
    }
   ]
  }

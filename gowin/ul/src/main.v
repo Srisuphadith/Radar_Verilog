@@ -1,21 +1,25 @@
-module Main(ech,clk2,distance_m,clk);
+module Main(ech,clk2,clk,seg_out);
   input clk;
   output clk2;
-  wire [17:0] count_ech;
+  output  [6:0] seg_out;
+  wire [50:0] count_ech;
   wire [10:0] distance_cm;
-  output  [3:0] distance_m;
+  
+    wire [3:0] distance_m;
   input ech;
 
   //clk_1us ck(clk);
+
   trigger_cnt cv(clk,clk2);
   echo_cnt eh(ech,count_ech,clk);
   distance_cal dis(count_ech,ech,distance_cm,distance_m);
+  seg7 seg(distance_m,seg_out);
 endmodule
 
 module trigger_cnt(clk,clk2);
 input clk;
 output reg clk2;
-  reg [17:0]cnt1;
+  reg [9:0]cnt1;
   reg [25:0]cnt2;
   reg b;
   initial 
@@ -28,7 +32,7 @@ output reg clk2;
   
   always @ (negedge clk)
     begin
-      if(cnt2 < 6749461)
+      if(cnt2 < 17494610)
             begin
               cnt2 <= cnt2 + 1;
             end
@@ -57,17 +61,18 @@ endmodule
 module echo_cnt(ech,count_ech,clk);
   input  ech;
   input  clk;
-  reg b;
-  output reg [17:0] count_ech;
+  reg b,c;
+  output reg [50:0] count_ech;
   reg [17:0] count;
 
   initial
     begin
       b = 0;
+      c = 0;
       count = 0;
       count_ech = 0;
     end
-  always @ (negedge clk)
+  always @ (posedge clk)
     begin
       if(ech == 1)
         begin
@@ -75,7 +80,7 @@ module echo_cnt(ech,count_ech,clk);
             begin
               b <= 0;
             end
-          count <= count + 1;
+            count <= count + 1;
         end
       else
         begin
@@ -95,15 +100,15 @@ module echo_cnt(ech,count_ech,clk);
   
 endmodule
 
-module distance_cal(count_ech,ech,distance_cm,distance_m);
+module distance_cal(count_ech,ech,distance_cm_10,distance_m);
   
-  input  [17:0] count_ech;
+  input  [50:0] count_ech;
   input  ech;
-  output reg [10:0] distance_cm;
+  output reg [3:0] distance_cm_10;
   output reg [3:0] distance_m;  
   initial
     begin
-      distance_cm = 0;
+      distance_cm_10 = 0;
       distance_m = 0;
     end
   
@@ -111,9 +116,33 @@ module distance_cal(count_ech,ech,distance_cm,distance_m);
     begin
       #10000;
       //distance unit centimeter
-      distance_cm = (170 * count_ech)/1000000;
-      distance_m = distance_cm/100;
+      distance_cm_10 = (6401*count_ech)/100000000;
+      distance_m = distance_cm_10;
     end
 endmodule
     
+module seg7(bin,seg_out);
+    input [3:0] bin;
+    output reg [6:0] seg_out;
+
+    always @ (*)
+    begin
+    case(bin)
+    
+    4'b0000 : seg_out = 7'b1111110;
+    4'b0001 : seg_out = 7'b0110000;
+    4'b0010 : seg_out = 7'b1101101;
+    4'b0011 : seg_out = 7'b1111001;
+    4'b0100 : seg_out = 7'b0110011;
+    4'b0101 : seg_out = 7'b1011011;
+    4'b0110 : seg_out = 7'b1011111;
+    4'b0111 : seg_out = 7'b1110000;
+    4'b1000 : seg_out = 7'b1111111;
+    4'b1001 : seg_out = 7'b1111011;
+    default: seg_out = 7'b1111110;
+    endcase 
+    end
+
+
+endmodule
   
