@@ -1,0 +1,36 @@
+[
+ {
+  "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+  "InstLine" : 1,
+  "InstName" : "Main",
+  "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "Main",
+  "SubInsts" : [
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "InstLine" : 10,
+    "InstName" : "cv",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "ModuleLine" : 15,
+    "ModuleName" : "trigger_cnt"
+   },
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "InstLine" : 11,
+    "InstName" : "eh",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "ModuleLine" : 57,
+    "ModuleName" : "echo_cnt"
+   },
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "InstLine" : 12,
+    "InstName" : "dis",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "ModuleLine" : 98,
+    "ModuleName" : "distance_cal"
+   }
+  ]
+ }
+]
