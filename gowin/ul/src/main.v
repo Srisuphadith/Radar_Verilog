@@ -139,6 +139,13 @@ module seg7(bin,seg_out);
     4'b0111 : seg_out = 7'b1110000;
     4'b1000 : seg_out = 7'b1111111;
     4'b1001 : seg_out = 7'b1111011;
+
+    4'b1010 : seg_out = 7'b1110111;//A
+    4'b1011 : seg_out = 7'b0011111;//B
+    4'b1100 : seg_out = 7'b1001110;//C
+    4'b1101 : seg_out = 7'b0111101;//D
+    4'b1110 : seg_out = 7'b1001111;//E
+    4'b1111 : seg_out = 7'b1000111;//F
     default: seg_out = 7'b1111110;
     endcase 
     end
