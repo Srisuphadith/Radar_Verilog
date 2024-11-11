@@ -1,19 +1,22 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'F:\Radar_VHDL\gowin\ul\src\main.v'
-Compiling module 'Main'("F:\Radar_VHDL\gowin\ul\src\main.v":1)
-Compiling module 'trigger_cnt'("F:\Radar_VHDL\gowin\ul\src\main.v":20)
-WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("F:\Radar_VHDL\gowin\ul\src\main.v":38)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("F:\Radar_VHDL\gowin\ul\src\main.v":49)
-Compiling module 'echo_cnt'("F:\Radar_VHDL\gowin\ul\src\main.v":62)
-WARN  (EX3791) : Expression size 19 truncated to fit in target size 18("F:\Radar_VHDL\gowin\ul\src\main.v":84)
-Compiling module 'distance_cal'("F:\Radar_VHDL\gowin\ul\src\main.v":104)
-WARN  (EX2629) : Delay control is not supported for synthesis("F:\Radar_VHDL\gowin\ul\src\main.v":118)
-WARN  (EX3791) : Expression size 51 truncated to fit in target size 4("F:\Radar_VHDL\gowin\ul\src\main.v":120)
-WARN  (EX3670) : Actual bit length 11 differs from formal bit length 4 for port 'distance_cm_10'("F:\Radar_VHDL\gowin\ul\src\main.v":15)
-Compiling module 'seg7'("F:\Radar_VHDL\gowin\ul\src\main.v":125)
-Compiling module 'clkforServo'("F:\Radar_VHDL\gowin\ul\src\main.v":156)
+Compiling module 'Main'("F:\Radar_VHDL\gowin\ul\src\main.v":2)
+Compiling module 'trigger_cnt'("F:\Radar_VHDL\gowin\ul\src\main.v":22)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("F:\Radar_VHDL\gowin\ul\src\main.v":40)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("F:\Radar_VHDL\gowin\ul\src\main.v":51)
+Compiling module 'echo_cnt'("F:\Radar_VHDL\gowin\ul\src\main.v":64)
+WARN  (EX3791) : Expression size 19 truncated to fit in target size 18("F:\Radar_VHDL\gowin\ul\src\main.v":86)
+Compiling module 'distance_cal'("F:\Radar_VHDL\gowin\ul\src\main.v":106)
+WARN  (EX2629) : Delay control is not supported for synthesis("F:\Radar_VHDL\gowin\ul\src\main.v":120)
+WARN  (EX3791) : Expression size 51 truncated to fit in target size 4("F:\Radar_VHDL\gowin\ul\src\main.v":122)
+WARN  (EX3670) : Actual bit length 11 differs from formal bit length 4 for port 'distance_cm_10'("F:\Radar_VHDL\gowin\ul\src\main.v":16)
+Compiling module 'seg7'("F:\Radar_VHDL\gowin\ul\src\main.v":127)
+Compiling module 'clkforServo'("F:\Radar_VHDL\gowin\ul\src\main.v":159)
 WARN  (EX3791) : Expression size 24 truncated to fit in target size 23("F:\Radar_VHDL\gowin\ul\src\main.v":172)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("F:\Radar_VHDL\gowin\ul\src\main.v":184)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("F:\Radar_VHDL\gowin\ul\src\main.v":189)
+WARN  (EX1998) : Net 'val[1]' does not have a driver("F:\Radar_VHDL\gowin\ul\src\main.v":161)
 NOTE  (EX0101) : Current top module is "Main"
 [5%] Running netlist conversion ...
 Running device independent optimization ...

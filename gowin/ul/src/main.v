@@ -1,3 +1,4 @@
+
 module Main(ech,clk2,clk,seg_out,servoClk);
   input clk;
   output clk2,servoClk;
@@ -15,6 +16,7 @@ module Main(ech,clk2,clk,seg_out,servoClk);
   distance_cal dis(count_ech,ech,distance_cm,distance_m);
   seg7 seg(distance_m,seg_out);
   clkforServo servo(clk,servoClk);
+
 endmodule
 
 module trigger_cnt(clk,clk2);
@@ -153,25 +155,42 @@ module seg7(bin,seg_out);
 
 endmodule
 
+
 module clkforServo(input clk, output reg servoClk);
   reg [22:0] cnt;
-  parameter val = 27000; // Set fixed on-time duration
+  reg [15:0] val;
+  reg direction;
 
   initial begin
-    servoClk = 0;  // Start with servoClk low
+    direction = 0;
+    servoClk = 0;
     cnt = 0;
+    val = 27000;
   end
 
-  always @ (negedge clk) begin
-    if (cnt < 5400000) begin  // Total period check (e.g., 20 ms)
-      if (cnt < val) begin    // On-time duration for servo pulse
-        servoClk <= 1;
-      end else begin
-        servoClk <= 0;        // Off-time duration after on-time ends
-      end
-      cnt <= cnt + 1;
+  always @ (posedge clk) begin
+    cnt <= cnt + 1;
+
+    if (cnt < val) begin
+      servoClk <= 1;
     end else begin
-      cnt <= 0;               // Reset count after full period
+      servoClk <= 0;
+    end
+
+    // When cnt reaches the full cycle of 5400000, reset cnt and adjust val
+    if (cnt >= 5400000) begin
+      cnt <= 0;
+      if (direction == 0) begin
+        val <= val + 108;
+        if (val >= 54000) begin
+          direction <= 1;
+        end
+      end else begin
+        val <= val - 108;
+        if (val <= 27000) begin
+          direction <= 0;
+        end
+      end
     end
   end
 endmodule

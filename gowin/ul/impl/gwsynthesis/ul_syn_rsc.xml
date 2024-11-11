@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="Main" T_Register="82(0)" T_Alu="31(0)" T_Lut="627(0)" T_MULTALU36X18="1(0)">
+<Module name="Main" T_Register="97(0)" T_Alu="59(0)" T_Lut="603(0)" T_MULTALU36X18="1(0)">
  <SubModule name="cv" Register="35" Alu="9" Lut="53" T_Register="35(35)" T_Alu="9(9)" T_Lut="53(53)"/>
  <SubModule name="eh" Register="19" Lut="31" T_Register="19(19)" T_Lut="31(31)"/>
- <SubModule name="dis" Register="4" Lut="522" MULTALU36X18="1" T_Register="4(4)" T_Lut="522(522)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="dis" Register="4" Lut="491" MULTALU36X18="1" T_Register="4(4)" T_Lut="491(491)" T_MULTALU36X18="1(1)"/>
  <SubModule name="seg" Lut="7" T_Lut="7(7)"/>
- <SubModule name="servo" Register="24" Alu="22" Lut="14" T_Register="24(24)" T_Alu="22(22)" T_Lut="14(14)"/>
+ <SubModule name="servo" Register="39" Alu="50" Lut="21" T_Register="39(39)" T_Alu="50(50)" T_Lut="21(21)"/>
 </Module>
