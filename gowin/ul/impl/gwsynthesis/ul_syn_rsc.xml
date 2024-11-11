@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="Main" T_Register="58(0)" T_Alu="9(0)" T_Lut="375(0)" T_MULTALU36X18="1(0)">
- <SubModule name="cv" Register="35" Alu="9" Lut="53" T_Register="35(35)" T_Alu="9(9)" T_Lut="53(53)"/>
+<Module name="Main" T_Register="58(0)" T_Alu="9(0)" T_Lut="599(0)" T_MULTALU36X18="1(0)">
+ <SubModule name="cv" Register="35" Alu="9" Lut="52" T_Register="35(35)" T_Alu="9(9)" T_Lut="52(52)"/>
  <SubModule name="eh" Register="19" Lut="31" T_Register="19(19)" T_Lut="31(31)"/>
- <SubModule name="dis" Register="4" Lut="284" MULTALU36X18="1" T_Register="4(4)" T_Lut="284(284)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="dis" Register="4" Lut="509" MULTALU36X18="1" T_Register="4(4)" T_Lut="509(509)" T_MULTALU36X18="1(1)"/>
  <SubModule name="seg" Lut="7" T_Lut="7(7)"/>
 </Module>

@@ -114,9 +114,9 @@ module distance_cal(count_ech,ech,distance_cm_10,distance_m);
   
   always @ (negedge ech)
     begin
-      #10000;
+      #100;
       //distance unit centimeter
-      distance_cm_10 = (6401*count_ech)/100000000;
+      distance_cm_10 = (6401*count_ech)/10000000;
       distance_m = distance_cm_10;
     end
 endmodule
