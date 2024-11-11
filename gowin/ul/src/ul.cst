@@ -4,8 +4,10 @@
 //Tool Version: V1.9.10.03 (64-bit)
 //Part Number: GW1NSR-LV4CQN48PC7/I6
 //Device: GW1NSR-4C
-//Created Time: Sun 11 10 22:12:55 2024
+//Created Time: Mon 11 11 15:27:35 2024
 
+IO_LOC "servoClk" 18;
+IO_PORT "servoClk" IO_TYPE=LVCMOS18 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "seg_out[6]" 19;
 IO_PORT "seg_out[6]" IO_TYPE=LVCMOS18 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "seg_out[5]" 20;

@@ -12,7 +12,7 @@
     "InstLine" : 13,
     "InstName" : "cv",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 19,
+    "ModuleLine" : 20,
     "ModuleName" : "trigger_cnt"
    },
    {
@@ -20,7 +20,7 @@
     "InstLine" : 14,
     "InstName" : "eh",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 61,
+    "ModuleLine" : 62,
     "ModuleName" : "echo_cnt"
    },
    {
@@ -28,7 +28,7 @@
     "InstLine" : 15,
     "InstName" : "dis",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 103,
+    "ModuleLine" : 104,
     "ModuleName" : "distance_cal"
    },
    {
@@ -36,8 +36,16 @@
     "InstLine" : 16,
     "InstName" : "seg",
     "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
-    "ModuleLine" : 124,
+    "ModuleLine" : 125,
     "ModuleName" : "seg7"
+   },
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "InstLine" : 17,
+    "InstName" : "servo",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/ul/src/main.v",
+    "ModuleLine" : 156,
+    "ModuleName" : "clkforServo"
    }
   ]
  }
