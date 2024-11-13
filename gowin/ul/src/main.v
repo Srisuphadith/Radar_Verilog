@@ -156,42 +156,46 @@ module seg7(bin,seg_out);
 endmodule
 
 
-module clkforServo(input clk, output reg servoClk);
-  reg [22:0] cnt;
-  reg [15:0] val;
-  reg direction;
+module clkforServo(
+    input clk,
+    output servoClk
+    );
 
-  initial begin
-    direction = 0;
-    servoClk = 0;
-    cnt = 0;
-    val = 27000;
-  end
+reg [20:0] counter;
+reg        servo_reg;
 
-  always @ (posedge clk) begin
-    cnt <= cnt + 1;
+reg [16:0] control    =    0;
+reg           toggle        =    1;
 
-    if (cnt < val) begin
-      servoClk <= 1;
-    end else begin
-      servoClk <= 0;
-    end
+always @(posedge clk)
+begin
 
-    // When cnt reaches the full cycle of 5400000, reset cnt and adjust val
-    if (cnt >= 5400000) begin
-      cnt <= 0;
-      if (direction == 0) begin
-        val <= val + 108;
-        if (val >= 54000) begin
-          direction <= 1;
+//Servo algorithm
+    counter <= counter + 1;
+    if(counter == 'd539999)
+            counter <= 0;
+
+    if(counter < ('d27000 + control))
+            servo_reg <= 1;
+    else
+            servo_reg <= 0;
+
+        if(control == 'd27000)
+                  toggle <= 0;
+        if(control == 0)
+                toggle <= 1;
+
+    if(counter == 0)
+        begin
+            if(toggle == 0)
+                    control <= control - 4320;
+            if(toggle == 1)
+                    control <= control + 4320;
         end
-      end else begin
-        val <= val - 108;
-        if (val <= 27000) begin
-          direction <= 0;
-        end
-      end
-    end
-  end
+
+end
+
+assign servoClk    = servo_reg;
+
 endmodule
   
