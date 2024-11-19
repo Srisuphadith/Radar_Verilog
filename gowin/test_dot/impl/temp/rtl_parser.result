@@ -1,0 +1,44 @@
+[
+ {
+  "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+  "InstLine" : 1,
+  "InstName" : "main",
+  "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "main",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "InstLine" : 13,
+    "InstName" : "cv",
+    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "ModuleLine" : 42,
+    "ModuleName" : "trigger_cnt"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "InstLine" : 14,
+    "InstName" : "count_t",
+    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "ModuleLine" : 84,
+    "ModuleName" : "echo_cnt"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "InstLine" : 15,
+    "InstName" : "dis",
+    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "ModuleLine" : 126,
+    "ModuleName" : "distance_cal"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "InstLine" : 16,
+    "InstName" : "dot",
+    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
+    "ModuleLine" : 19,
+    "ModuleName" : "display"
+   }
+  ]
+ }
+]
