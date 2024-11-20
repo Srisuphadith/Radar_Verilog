@@ -5,10 +5,11 @@ reg [19:0] x; //high time
 reg [0:1] sel ; //select degree
 reg [26:0] loop = 0; // count interval
 reg [19:0] set_p = 66000;
-
+reg toggle;
 initial
     begin
         counter = 0;
+        toggle = 0;
         sel = 2'b01; //set degree
     end
 
@@ -25,20 +26,46 @@ always @(posedge clk)
             counter <=0;
     end
 
-    // 0 to 180 in 4.625 s
-    if(loop < 2500) 
+
+    if(toggle == 0)
         begin
+            if(loop < 2500) 
+            begin
             loop <= loop +1;
+            end
+            else
+                begin
+                    if(set_p > 1600)
+                    begin
+                        set_p = set_p-1;
+                    end
+                    else
+                    begin
+                        toggle = 1;
+                    end
+                end
+                loop <= 0;
         end
     else
         begin
-            if(set_p > 16000)
-                 begin
-                    set_p = set_p-1;
-                 end
-            loop = 0;
+            if(loop < 2500) 
+            begin
+            loop <= loop +1;
+            end
+            else
+                begin
+                    if(set_p < 66000)
+                    begin
+                        set_p = set_p+1;
+                    end
+                    else
+                    begin
+                        toggle = 0;
+                    end
+                end
+                loop <= 0;
+        end
          end
-    end
 
 ///////////////////////////////////////////////////////////////////////////
 always @(posedge clk) 
