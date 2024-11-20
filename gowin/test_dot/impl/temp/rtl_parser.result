@@ -9,43 +9,51 @@
   "SubInsts" : [
    {
     "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "InstLine" : 21,
+    "InstLine" : 22,
     "InstName" : "cv",
     "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "ModuleLine" : 65,
+    "ModuleLine" : 93,
     "ModuleName" : "trigger_cnt"
    },
    {
     "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "InstLine" : 22,
+    "InstLine" : 23,
     "InstName" : "count_t",
     "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "ModuleLine" : 107,
+    "ModuleLine" : 135,
     "ModuleName" : "echo_cnt"
    },
    {
     "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "InstLine" : 23,
+    "InstLine" : 24,
     "InstName" : "dis",
     "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "ModuleLine" : 149,
+    "ModuleLine" : 177,
     "ModuleName" : "distance_cal"
    },
    {
     "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "InstLine" : 24,
+    "InstLine" : 25,
     "InstName" : "dot",
     "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "ModuleLine" : 29,
+    "ModuleLine" : 57,
     "ModuleName" : "display"
    },
    {
     "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "InstLine" : 25,
+    "InstLine" : 26,
     "InstName" : "ser",
     "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
-    "ModuleLine" : 168,
+    "ModuleLine" : 196,
     "ModuleName" : "servo"
+   },
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "InstLine" : 27,
+    "InstName" : "sp",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "ModuleLine" : 30,
+    "ModuleName" : "speaker"
    }
   ]
  }

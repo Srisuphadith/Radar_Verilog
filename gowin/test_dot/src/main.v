@@ -11,7 +11,8 @@ module main (
     output tk,
     input clk,
     input ech,
-    output servo
+    output servo,
+    output sound
 );
     wire [50:0] count_ech;
     wire [6:0] distance_cm;
@@ -23,8 +24,35 @@ module main (
     distance_cal dis(count_ech,ech,distance_cm);
     display dot(distance_cm,col,row,toggle,row_control);
     servo ser(clk,servo,toggle,row_control);
+    speaker sp(clk,sound,distance_cm);
 endmodule
 
+module speaker(
+    input clk,
+    output sound,
+    input [6:0]distance
+);
+    reg [16:0] cnt = 0;
+    reg [29:0] stop = 0;
+    reg toggle = 0;
+    always @ (posedge clk)
+        begin 
+            if(cnt < 61405) cnt <= cnt+1;
+            else
+            cnt <= 0;
+
+            if(stop < (distance*200000)) stop <= stop+1;
+            else
+            begin
+                stop <= 0;
+                toggle <= ~toggle;
+            end
+        end
+begin
+    assign sound = ((cnt<30702) ? 1:0)&toggle;  
+end
+
+endmodule
 //display dotmatrix 5x7
 module display(
     input [6:0] distance_cm,
