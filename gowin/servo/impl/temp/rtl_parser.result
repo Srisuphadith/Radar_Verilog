@@ -1,10 +1,10 @@
 [
  {
-  "InstFile" : "C:/Users/niner/Desktop/servo/src/main.v",
-  "InstLine" : 3,
-  "InstName" : "top",
-  "ModuleFile" : "C:/Users/niner/Desktop/servo/src/main.v",
-  "ModuleLine" : 3,
-  "ModuleName" : "top"
+  "InstFile" : "F:/Radar_VHDL/gowin/servo/src/main.v",
+  "InstLine" : 1,
+  "InstName" : "servo",
+  "ModuleFile" : "F:/Radar_VHDL/gowin/servo/src/main.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "servo"
  }
 ]

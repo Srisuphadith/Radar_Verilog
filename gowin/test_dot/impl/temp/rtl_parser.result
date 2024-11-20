@@ -1,43 +1,51 @@
 [
  {
-  "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-  "InstLine" : 1,
+  "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+  "InstLine" : 8,
   "InstName" : "main",
-  "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-  "ModuleLine" : 1,
+  "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+  "ModuleLine" : 8,
   "ModuleName" : "main",
   "SubInsts" : [
    {
-    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "InstLine" : 13,
+    "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "InstLine" : 21,
     "InstName" : "cv",
-    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "ModuleLine" : 42,
+    "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "ModuleLine" : 65,
     "ModuleName" : "trigger_cnt"
    },
    {
-    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "InstLine" : 14,
+    "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "InstLine" : 22,
     "InstName" : "count_t",
-    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "ModuleLine" : 84,
+    "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "ModuleLine" : 107,
     "ModuleName" : "echo_cnt"
    },
    {
-    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "InstLine" : 15,
+    "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "InstLine" : 23,
     "InstName" : "dis",
-    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "ModuleLine" : 126,
+    "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "ModuleLine" : 149,
     "ModuleName" : "distance_cal"
    },
    {
-    "InstFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "InstLine" : 16,
+    "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "InstLine" : 24,
     "InstName" : "dot",
-    "ModuleFile" : "C:/Users/niner/Desktop/test_dot/src/main.v",
-    "ModuleLine" : 19,
+    "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "ModuleLine" : 29,
     "ModuleName" : "display"
+   },
+   {
+    "InstFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "InstLine" : 25,
+    "InstName" : "ser",
+    "ModuleFile" : "F:/Radar_VHDL/gowin/test_dot/src/main.v",
+    "ModuleLine" : 168,
+    "ModuleName" : "servo"
    }
   ]
  }

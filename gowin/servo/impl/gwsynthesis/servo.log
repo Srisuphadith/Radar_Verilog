@@ -1,12 +1,14 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'C:\Users\niner\Desktop\servo\src\main.v'
-Compiling module 'top'("C:\Users\niner\Desktop\servo\src\main.v":3)
-WARN  (EX3780) : Using initial value of 'sel' since it is never assigned("C:\Users\niner\Desktop\servo\src\main.v":18)
-WARN  (EX3791) : Expression size 22 truncated to fit in target size 21("C:\Users\niner\Desktop\servo\src\main.v":22)
-WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("C:\Users\niner\Desktop\servo\src\main.v":30)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 20("C:\Users\niner\Desktop\servo\src\main.v":36)
-NOTE  (EX0101) : Current top module is "top"
+Analyzing Verilog file 'F:\Radar_VHDL\gowin\servo\src\main.v'
+Compiling module 'servo'("F:\Radar_VHDL\gowin\servo\src\main.v":1)
+WARN  (EX3780) : Using initial value of 'sel' since it is never assigned("F:\Radar_VHDL\gowin\servo\src\main.v":14)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 21("F:\Radar_VHDL\gowin\servo\src\main.v":22)
+WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("F:\Radar_VHDL\gowin\servo\src\main.v":34)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 20("F:\Radar_VHDL\gowin\servo\src\main.v":40)
+WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("F:\Radar_VHDL\gowin\servo\src\main.v":50)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 20("F:\Radar_VHDL\gowin\servo\src\main.v":56)
+NOTE  (EX0101) : Current top module is "servo"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
@@ -23,6 +25,6 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-[95%] Generate netlist file "C:\Users\niner\Desktop\servo\impl\gwsynthesis\servo.vg" completed
-[100%] Generate report file "C:\Users\niner\Desktop\servo\impl\gwsynthesis\servo_syn.rpt.html" completed
+[95%] Generate netlist file "F:\Radar_VHDL\gowin\servo\impl\gwsynthesis\servo.vg" completed
+[100%] Generate report file "F:\Radar_VHDL\gowin\servo\impl\gwsynthesis\servo_syn.rpt.html" completed
 GowinSynthesis finish

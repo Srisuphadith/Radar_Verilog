@@ -1,7 +1,7 @@
-Reading netlist file: "C:\Users\niner\Desktop\test_dot\impl\gwsynthesis\test_dot.vg"
-Parsing netlist file "C:\Users\niner\Desktop\test_dot\impl\gwsynthesis\test_dot.vg" completed
+Reading netlist file: "F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg"
+Parsing netlist file "F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg" completed
 Processing netlist completed
-Reading constraint file: "C:\Users\niner\Desktop\test_dot\src\port.cst"
+Reading constraint file: "F:\Radar_VHDL\gowin\test_dot\src\port.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -23,10 +23,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "C:\Users\niner\Desktop\test_dot\impl\pnr\test_dot.power.html" completed
-Generate file "C:\Users\niner\Desktop\test_dot\impl\pnr\test_dot.pin.html" completed
-Generate file "C:\Users\niner\Desktop\test_dot\impl\pnr\test_dot.rpt.html" completed
-Generate file "C:\Users\niner\Desktop\test_dot\impl\pnr\test_dot.rpt.txt" completed
-Generate file "C:\Users\niner\Desktop\test_dot\impl\pnr\test_dot.tr.html" completed
-Tue Nov 19 23:24:10 2024
+Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.power.html" completed
+Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.pin.html" completed
+Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.rpt.html" completed
+Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.rpt.txt" completed
+Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.tr.html" completed
+Wed Nov 20 17:18:41 2024
 

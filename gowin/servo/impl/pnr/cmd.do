@@ -1,8 +1,8 @@
--d C:\Users\niner\Desktop\servo\impl\gwsynthesis\servo.vg
+-d F:\Radar_VHDL\gowin\servo\impl\gwsynthesis\servo.vg
 -p GW1NSR-4C-QFN48P-7
 -pn GW1NSR-LV4CQN48PC7/I6
--cst C:\Users\niner\Desktop\servo\src\servo.cst
--cfg C:\Users\niner\Desktop\servo\impl\pnr\device.cfg
+-cst F:\Radar_VHDL\gowin\servo\src\servo.cst
+-cfg F:\Radar_VHDL\gowin\servo\impl\pnr\device.cfg
 -bit
 -tr
 -ph

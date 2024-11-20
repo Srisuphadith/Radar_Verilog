@@ -1,7 +1,7 @@
-Reading netlist file: "C:\Users\niner\Desktop\servo\impl\gwsynthesis\servo.vg"
-Parsing netlist file "C:\Users\niner\Desktop\servo\impl\gwsynthesis\servo.vg" completed
+Reading netlist file: "F:\Radar_VHDL\gowin\servo\impl\gwsynthesis\servo.vg"
+Parsing netlist file "F:\Radar_VHDL\gowin\servo\impl\gwsynthesis\servo.vg" completed
 Processing netlist completed
-Reading constraint file: "C:\Users\niner\Desktop\servo\src\servo.cst"
+Reading constraint file: "F:\Radar_VHDL\gowin\servo\src\servo.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -22,10 +22,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "C:\Users\niner\Desktop\servo\impl\pnr\servo.power.html" completed
-Generate file "C:\Users\niner\Desktop\servo\impl\pnr\servo.pin.html" completed
-Generate file "C:\Users\niner\Desktop\servo\impl\pnr\servo.rpt.html" completed
-Generate file "C:\Users\niner\Desktop\servo\impl\pnr\servo.rpt.txt" completed
-Generate file "C:\Users\niner\Desktop\servo\impl\pnr\servo.tr.html" completed
-Wed Nov 20 08:26:58 2024
+Generate file "F:\Radar_VHDL\gowin\servo\impl\pnr\servo.power.html" completed
+Generate file "F:\Radar_VHDL\gowin\servo\impl\pnr\servo.pin.html" completed
+Generate file "F:\Radar_VHDL\gowin\servo\impl\pnr\servo.rpt.html" completed
+Generate file "F:\Radar_VHDL\gowin\servo\impl\pnr\servo.rpt.txt" completed
+Generate file "F:\Radar_VHDL\gowin\servo\impl\pnr\servo.tr.html" completed
+Wed Nov 20 14:19:06 2024
 

@@ -30,42 +30,36 @@ always @(posedge clk)
     if(toggle == 0)
         begin
             if(loop < 2500) 
-            begin
-            loop <= loop +1;
-            end
+                begin
+                loop <= loop +1;
+                end
             else
                 begin
-                    if(set_p > 1600)
-                    begin
-                        set_p = set_p-1;
-                    end
-                    else
-                    begin
-                        toggle = 1;
-                    end
+                    if(set_p > 16000)
+                        begin
+                            set_p = set_p-1;
+                        end
+                    else toggle = ~toggle;
+                    loop = 0;
                 end
-                loop <= 0;
         end
     else
         begin
             if(loop < 2500) 
-            begin
-            loop <= loop +1;
-            end
+                begin
+                    loop <= loop +1;
+                end
             else
                 begin
                     if(set_p < 66000)
-                    begin
-                        set_p = set_p+1;
-                    end
-                    else
-                    begin
-                        toggle = 0;
-                    end
+                        begin
+                            set_p = set_p+1;
+                        end
+                    else toggle = ~toggle;
+                    loop = 0;
                 end
-                loop <= 0;
         end
-         end
+    end
 
 ///////////////////////////////////////////////////////////////////////////
 always @(posedge clk) 

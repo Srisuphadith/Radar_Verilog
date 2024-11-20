@@ -4,13 +4,13 @@
     <Version>beta</Version>
     <Device id="GW1NSR-4C" package="QFN48P" speed="7" partNumber="GW1NSR-LV4CQN48PC7/I6"/>
     <FileList>
-        <File path="C:\Users\niner\Desktop\test_dot\src\main.v" type="verilog"/>
+        <File path="F:\Radar_VHDL\gowin\test_dot\src\main.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="global_freq" value="50.000"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="C:\Users\niner\Desktop\test_dot\impl\gwsynthesis\test_dot.vg"/>
+        <Option type="output_file" value="F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="0"/>
         <Option type="vcc" value="1.2"/>
