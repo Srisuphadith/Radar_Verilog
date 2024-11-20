@@ -1,7 +1,7 @@
 //
 //Written by GowinSynthesis
 //Tool Version "V1.9.10.03 (64-bit)"
-//Wed Nov 20 22:51:09 2024
+//Wed Nov 20 23:05:29 2024
 
 //Source file index table:
 //file0 "\F:/Radar_VHDL/gowin/test_dot/src/main.v"
@@ -1232,8 +1232,7 @@ module distance_cal (
   n118_82,
   n114_286,
   n115_96,
-  distance_cm_Z,
-  distance_cm
+  distance_cm_Z
 )
 ;
 input n98_6;
@@ -1247,8 +1246,7 @@ output n120_99;
 output n118_82;
 output n114_286;
 output n115_96;
-output [5:1] distance_cm_Z;
-output [6:6] distance_cm;
+output [6:1] distance_cm_Z;
 wire n114_26;
 wire n114_27;
 wire n115_25;
@@ -5631,7 +5629,7 @@ defparam distance_cm_2_s0.INIT=1'b0;
 );
 defparam distance_cm_1_s0.INIT=1'b0;
   DFF distance_cm_6_s0 (
-    .Q(distance_cm[6]),
+    .Q(distance_cm_Z[6]),
     .D(n114_286),
     .CLK(n98_6) 
 );
@@ -5675,7 +5673,6 @@ module display (
   n301_7,
   n301_8,
   n301_13,
-  distance_cm,
   distance_cm_Z,
   set_p,
   col_d,
@@ -5687,8 +5684,7 @@ input n301_16;
 input n301_7;
 input n301_8;
 input n301_13;
-input [6:6] distance_cm;
-input [5:1] distance_cm_Z;
+input [6:1] distance_cm_Z;
 input [19:3] set_p;
 output [4:0] col_d;
 output [6:0] row_d;
@@ -5843,7 +5839,7 @@ wire VCC;
 wire GND;
   LUT3 col_d_3_s (
     .F(col_d[3]),
-    .I0(distance_cm[6]),
+    .I0(distance_cm_Z[6]),
     .I1(col_d_3_3),
     .I2(col_d_3_4) 
 );
@@ -5857,7 +5853,7 @@ defparam col_d_3_s.INIT=8'h40;
 defparam col_d_2_s.INIT=8'hE0;
   LUT3 col_d_1_s (
     .F(col_d[1]),
-    .I0(distance_cm[6]),
+    .I0(distance_cm_Z[6]),
     .I1(col_d_3_3),
     .I2(col_d_3_4) 
 );
@@ -5866,7 +5862,7 @@ defparam col_d_1_s.INIT=8'h41;
     .F(col_d[0]),
     .I0(col_d_4_3),
     .I1(col_d_3_3),
-    .I2(distance_cm[6]),
+    .I2(distance_cm_Z[6]),
     .I3(col_d_3_4) 
 );
 defparam col_d_0_s.INIT=16'h0E03;
@@ -6853,7 +6849,7 @@ defparam row_d_6_s140.INIT=16'hB44B;
   LUT4 col_d_4_s3 (
     .F(col_d[4]),
     .I0(col_d_4_3),
-    .I1(distance_cm[6]),
+    .I1(distance_cm_Z[6]),
     .I2(col_d_3_3),
     .I3(col_d_3_4) 
 );
@@ -10098,8 +10094,7 @@ wire n301_16;
 wire servo_d;
 wire sound_d;
 wire [17:0] count;
-wire [5:1] distance_cm_Z;
-wire [6:6] distance_cm;
+wire [6:1] distance_cm_Z;
 wire [4:0] col_d;
 wire [6:0] row_d;
 wire [19:3] set_p;
@@ -10196,8 +10191,7 @@ wire GND;
     .n118_82(n118_82),
     .n114_286(n114_286),
     .n115_96(n115_96),
-    .distance_cm_Z(distance_cm_Z[5:1]),
-    .distance_cm(distance_cm[6])
+    .distance_cm_Z(distance_cm_Z[6:1])
 );
   display dot (
     .n301_11(n301_11),
@@ -10205,8 +10199,7 @@ wire GND;
     .n301_7(n301_7),
     .n301_8(n301_8),
     .n301_13(n301_13),
-    .distance_cm(distance_cm[6]),
-    .distance_cm_Z(distance_cm_Z[5:1]),
+    .distance_cm_Z(distance_cm_Z[6:1]),
     .set_p(set_p[19:3]),
     .col_d(col_d[4:0]),
     .row_d(row_d[6:0])

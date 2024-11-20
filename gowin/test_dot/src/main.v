@@ -37,10 +37,12 @@ module speaker(
     reg toggle = 0;
     always @ (posedge clk)
         begin 
+            //generate signal 440 Hz
             if(cnt < 61405) cnt <= cnt+1;
             else
             cnt <= 0;
 
+            //duration of play sound dependt on distance represented by toggle
             if(stop < (distance*200000)) stop <= stop+1;
             else
             begin
@@ -49,6 +51,7 @@ module speaker(
             end
         end
 begin
+    //use toggle to enable sound
     assign sound = ((cnt<30702) ? 1:0)&toggle;  
 end
 
