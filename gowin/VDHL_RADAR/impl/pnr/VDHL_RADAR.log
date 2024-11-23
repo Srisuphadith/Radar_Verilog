@@ -1,7 +1,7 @@
-Reading netlist file: "F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg"
-Parsing netlist file "F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg" completed
+Reading netlist file: "C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg"
+Parsing netlist file "C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg" completed
 Processing netlist completed
-Reading constraint file: "F:\Radar_VHDL\gowin\test_dot\src\port.cst"
+Reading constraint file: "C:\Users\niner\Desktop\VDHL_RADAR\src\VDHL_RADAR.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -23,10 +23,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.power.html" completed
-Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.pin.html" completed
-Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.rpt.html" completed
-Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.rpt.txt" completed
-Generate file "F:\Radar_VHDL\gowin\test_dot\impl\pnr\test_dot.tr.html" completed
-Thu Nov 21 23:04:21 2024
+Generate file "C:\Users\niner\Desktop\VDHL_RADAR\impl\pnr\VDHL_RADAR.power.html" completed
+Generate file "C:\Users\niner\Desktop\VDHL_RADAR\impl\pnr\VDHL_RADAR.pin.html" completed
+Generate file "C:\Users\niner\Desktop\VDHL_RADAR\impl\pnr\VDHL_RADAR.rpt.html" completed
+Generate file "C:\Users\niner\Desktop\VDHL_RADAR\impl\pnr\VDHL_RADAR.rpt.txt" completed
+Generate file "C:\Users\niner\Desktop\VDHL_RADAR\impl\pnr\VDHL_RADAR.tr.html" completed
+Sat Nov 23 22:53:00 2024
 

@@ -1,0 +1,60 @@
+[
+ {
+  "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+  "InstLine" : 8,
+  "InstName" : "main",
+  "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+  "ModuleLine" : 8,
+  "ModuleName" : "main",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "InstLine" : 22,
+    "InstName" : "cv",
+    "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "ModuleLine" : 96,
+    "ModuleName" : "trigger_cnt"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "InstLine" : 23,
+    "InstName" : "count_t",
+    "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "ModuleLine" : 138,
+    "ModuleName" : "echo_cnt"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "InstLine" : 24,
+    "InstName" : "dis",
+    "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "ModuleLine" : 180,
+    "ModuleName" : "distance_cal"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "InstLine" : 25,
+    "InstName" : "dot",
+    "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "ModuleLine" : 60,
+    "ModuleName" : "display"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "InstLine" : 26,
+    "InstName" : "ser",
+    "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "ModuleLine" : 199,
+    "ModuleName" : "servo"
+   },
+   {
+    "InstFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "InstLine" : 27,
+    "InstName" : "sp",
+    "ModuleFile" : "C:/Users/niner/Desktop/VDHL_RADAR/src/radar_controller.v",
+    "ModuleLine" : 30,
+    "ModuleName" : "speaker"
+   }
+  ]
+ }
+]

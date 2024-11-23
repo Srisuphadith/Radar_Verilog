@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>Pin Report</title>
+<title>PnR Analysis Report</title>
 <style type="text/css">
 body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
 div#main_wrapper{ width: 100%; }
@@ -30,10 +30,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <div id="catalog_wrapper">
 <div id="catalog">
 <ul>
-<li><a href="#Message" style=" font-size: 16px;">Pin Messages</a></li>
-<!--<li><a href="#Summary" style=" font-size: 16px;">Pin Summaries</a></li>-->
-<li><a href="#Pin_Details" style=" font-size: 16px;">Pin Details</a>
+<li><a href="#Message" style=" font-size: 16px;">PnR Messages</a></li>
+<!--<li><a href="#Summary" style=" font-size: 16px;">PnR Summaries</a></li>-->
+<li><a href="#PnR_Details" style=" font-size: 16px;">PnR Details</a>
+<li><a href="#Resource" style=" font-size: 16px;">Resource</a>
 <ul>
+<li><a href="#Resource_Usage_Summary" style=" font-size: 14px;">Resource Usage Summary</a></li>
+<li><a href="#I/O_Bank_Usage_Summary" style=" font-size: 14px;">I/O Bank Usage Summary</a></li>
+<li><a href="#Global_Clock_Usage_Summary" style=" font-size: 14px;">Clock Resource Usage Summary</a></li>
+<li><a href="#Global_Clock_Signals" style=" font-size: 14px;">Global Clock Signals</a></li>
 <li><a href="#Pinout_by_Port_Name" style=" font-size: 14px;">Pinout by Port Name</a></li>
 <li><a href="#All_Package_Pins" style=" font-size: 14px;">All Package Pins</a></li>
 </ul>
@@ -42,19 +47,19 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </div><!-- catalog -->
 </div><!-- catalog_wrapper -->
 <div id="content">
-<h1><a name="Message">Pin Messages</a></h1>
+<h1><a name="Message">PnR Messages</a></h1>
 <table class="summary_table">
 <tr>
 <td class="label">Report Title</td>
-<td>Pin Report</td>
+<td>PnR Report</td>
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg</td>
+<td>C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg</td>
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>F:\Radar_VHDL\gowin\test_dot\src\port.cst</td>
+<td>C:\Users\niner\Desktop\VDHL_RADAR\src\VDHL_RADAR.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
@@ -74,7 +79,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Thu Nov 21 23:04:20 2024
+<td>Sat Nov 23 22:53:00 2024
 </td>
 </tr>
 <tr>
@@ -82,7 +87,184 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>Copyright (C)2014-2024 Gowin Semiconductor Corporation. All rights reserved.</td>
 </tr>
 </table>
-<h1><a name="Pin_Details">Pin Details</a></h1>
+<h1><a name="PnR_Details">PnR Details</a></h1>
+<!--<h1><a name="Summary">PnR Summaries</a></h1>-->
+<table class="summary_table">
+<tr>
+<td class="label">Place & Route Process</td>
+<td>Running placement:
+   Placement Phase 0: CPU time = 0h 0m 0.068s, Elapsed time = 0h 0m 0.069s
+   Placement Phase 1: CPU time = 0h 0m 0.08s, Elapsed time = 0h 0m 0.08s
+   Placement Phase 2: CPU time = 0h 0m 0.118s, Elapsed time = 0h 0m 0.119s
+   Placement Phase 3: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+   Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+Running routing:
+   Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0s
+   Routing Phase 1: CPU time = 0h 0m 0.061s, Elapsed time = 0h 0m 0.061s
+   Routing Phase 2: CPU time = 0h 0m 0.384s, Elapsed time = 0h 0m 0.384s
+   Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
+   Total Routing: CPU time = 0h 0m 0.446s, Elapsed time = 0h 0m 0.445s
+Generate output files:
+   CPU time = 0h 0m 0.788s, Elapsed time = 0h 0m 0.788s
+</td>
+</tr>
+<tr>
+<td class="label">Total Time and Memory Usage</td>
+<td>CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s, Peak memory usage = 242MB</td>
+</tr>
+</table>
+<br/>
+<h1><a name="Resource">Resource</a></h1>
+<!--<h1><a name="Summary">PnR Summaries</a></h1>-->
+<h2><a name="Resource_Usage_Summary">Resource Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+<td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">Logic</td>
+<td>971/4608</td>
+<td>22%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
+<td>971(797 LUT, 174 ALU, 0 ROM16)</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --SSRAM(RAM16)</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">Register</td>
+<td>177/3573</td>
+<td>5%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --Logic Register as Latch</td>
+<td>0/3456</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --Logic Register as FF</td>
+<td>177/3456</td>
+<td>6%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --I/O Register as Latch</td>
+<td>0/117</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --I/O Register as FF</td>
+<td>0/117</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">CLS</td>
+<td>536/2304</td>
+<td>24%</td>
+</tr>
+<tr>
+<td class="label">I/O Port</td>
+<td>17/39</td>
+<td>44%</td>
+</tr>
+<tr>
+<td class="label">I/O Buf</td>
+<td>17</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Input Buf</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Output Buf</td>
+<td>15</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Inout Buf</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">DSP</td>
+<td>1 MULT18X18<br/>1 MULTALU36X18<br/></td><td>19%</td>
+</tr>
+</table>
+<h2><a name="I/O_Bank_Usage_Summary">I/O Bank Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>I/O Bank</b></td>
+<td><b>Usage</b></td><td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">bank 0</td>
+<td>1/9</td><td>12%</td>
+</tr>
+<tr>
+<td class="label">bank 1</td>
+<td>5/10</td><td>50%</td>
+</tr>
+<tr>
+<td class="label">bank 2</td>
+<td>4/9</td><td>45%</td>
+</tr>
+<tr>
+<td class="label">bank 3</td>
+<td>7/11</td><td>64%</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Global_Clock_Usage_Summary">Clock Resource Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Clock Resource</b></td>
+<td><b>Usage</b></td>
+<td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">PRIMARY</td>
+<td>2/8</td>
+<td>25%</td>
+</tr>
+<tr>
+<td class="label">LW</td>
+<td>0/8</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">GCLK_PIN</td>
+<td>3/5</td>
+<td>60%</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Global_Clock_Signals">Global Clock Signals:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Signal</b></td>
+<td><b>Global Clock</b></td>
+<td><b>Location</b></td>
+</tr>
+<tr>
+<td class="label">clk_d</td>
+<td>PRIMARY</td>
+<td> LEFT RIGHT</td>
+</tr>
+<tr>
+<td class="label">n98_6</td>
+<td>PRIMARY</td>
+<td> LEFT RIGHT</td>
+</tr>
+</table>
+<br/>
 <h2><a name="Pinout_by_Port_Name">Pinout by Port Name:</a></h2>
 <table class="summary_table">
 <tr>

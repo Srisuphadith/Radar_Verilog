@@ -5,33 +5,33 @@
 1. PnR Messages
 
   <Report Title>: PnR Report
-  <Design File>: F:\Radar_VHDL\gowin\test_dot\impl\gwsynthesis\test_dot.vg
-  <Physical Constraints File>: F:\Radar_VHDL\gowin\test_dot\src\port.cst
+  <Design File>: C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg
+  <Physical Constraints File>: C:\Users\niner\Desktop\VDHL_RADAR\src\VDHL_RADAR.cst
   <Timing Constraints File>: ---
   <Tool Version>: V1.9.10.03 (64-bit)
   <Part Number>: GW1NSR-LV4CQN48PC7/I6
   <Device>: GW1NSR-4C
-  <Created Time>:Thu Nov 21 23:04:20 2024
+  <Created Time>:Sat Nov 23 22:53:00 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.063s, Elapsed time = 0h 0m 0.063s
-    Placement Phase 1: CPU time = 0h 0m 0.071s, Elapsed time = 0h 0m 0.071s
-    Placement Phase 2: CPU time = 0h 0m 0.107s, Elapsed time = 0h 0m 0.107s
-    Placement Phase 3: CPU time = 0h 0m 0.988s, Elapsed time = 0h 0m 0.988s
+    Placement Phase 0: CPU time = 0h 0m 0.068s, Elapsed time = 0h 0m 0.069s
+    Placement Phase 1: CPU time = 0h 0m 0.08s, Elapsed time = 0h 0m 0.08s
+    Placement Phase 2: CPU time = 0h 0m 0.118s, Elapsed time = 0h 0m 0.119s
+    Placement Phase 3: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
     Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Routing Phase 1: CPU time = 0h 0m 0.047s, Elapsed time = 0h 0m 0.047s
-    Routing Phase 2: CPU time = 0h 0m 0.313s, Elapsed time = 0h 0m 0.314s
+    Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0s
+    Routing Phase 1: CPU time = 0h 0m 0.061s, Elapsed time = 0h 0m 0.061s
+    Routing Phase 2: CPU time = 0h 0m 0.384s, Elapsed time = 0h 0m 0.384s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 0.36s, Elapsed time = 0h 0m 0.361s
+    Total Routing: CPU time = 0h 0m 0.446s, Elapsed time = 0h 0m 0.445s
  Generate output files:
-    CPU time = 0h 0m 0.447s, Elapsed time = 0h 0m 0.447s
+    CPU time = 0h 0m 0.788s, Elapsed time = 0h 0m 0.788s
 
- Total Time and Memory Usage: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s, Peak memory usage = 204MB
+ Total Time and Memory Usage: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s, Peak memory usage = 242MB
 
 
 3. Resource Usage Summary
