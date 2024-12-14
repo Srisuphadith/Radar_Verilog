@@ -25,7 +25,7 @@ module main (
     display dot(distance_cm,col,row,toggle,row_control,clk_dis);
     servo ser(clk,servo,toggle,row_control);
     speaker sp(clk,sound,distance_cm);
-    displayClk(clk,clk_dis);
+    displayClk dclk(clk,clk_dis);
 endmodule
 
 
