@@ -1,8 +1,8 @@
--d C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg
+-d F:\Radar_VHDL\gowin\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg
 -p GW1NSR-4C-QFN48P-7
 -pn GW1NSR-LV4CQN48PC7/I6
--cst C:\Users\niner\Desktop\VDHL_RADAR\src\VDHL_RADAR.cst
--cfg C:\Users\niner\Desktop\VDHL_RADAR\impl\pnr\device.cfg
+-cst F:\Radar_VHDL\gowin\VDHL_RADAR\src\VDHL_RADAR.cst
+-cfg F:\Radar_VHDL\gowin\VDHL_RADAR\impl\pnr\device.cfg
 -bit
 -tr
 -ph

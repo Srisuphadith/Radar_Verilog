@@ -18,14 +18,16 @@ module main (
     wire [6:0] distance_cm;
     wire toggle;
     wire [3:0] row_control ;
-
+    wire clk_dis;
     trigger_cnt cv(clk,tk);
     echo_cnt count_t(ech,count_ech,clk);
     distance_cal dis(count_ech,ech,distance_cm);
-    display dot(distance_cm,col,row,toggle,row_control);
+    display dot(distance_cm,col,row,toggle,row_control,clk_dis);
     servo ser(clk,servo,toggle,row_control);
     speaker sp(clk,sound,distance_cm);
+    displayClk(clk,clk_dis);
 endmodule
+
 
 module speaker(
     input clk,
@@ -57,40 +59,88 @@ end
 
 endmodule
 //display dotmatrix 5x7
+module displayClk(
+    input clk,
+    output reg clkOut
+);
+    reg [25:0] cnt = 0;  // 26-bit counter
+    reg toggle = 0;
+
+    always @(posedge clk) begin
+        if (cnt == 56250) begin
+            cnt <= 0;
+            toggle <= ~toggle;  // Toggle the clock output
+        end else begin
+            cnt <= cnt + 1;
+        end
+    end
+
+    // Generate PWM signal ~50Hz
+    always @(posedge clk) begin
+        clkOut <= toggle;
+    end
+endmodule
 module display(
     input [6:0] distance_cm,
     output reg  [4:0] col,
     output reg [6:0] row = 7'b0000000,
     input reverse,
-    input [3:0] row_pos
+    input [3:0] row_pos,
+    input [6:0] displayClk
 );
-    reg [3:0] col_pos;
+       reg [3:0] col_pos;
+    reg[3:0] cnt;
+    reg[5:0] store_col_pos_with_row0;
+    reg[5:0] store_col_pos_with_row1;
+    reg[5:0] store_col_pos_with_row2;
+    reg[5:0] store_col_pos_with_row3;
+    reg[5:0] store_col_pos_with_row4;
+    reg[5:0] store_col_pos_with_row5;
+    reg[5:0] store_col_pos_with_row6;
+    reg  [4:0] tmpcol;
+      always @ (posedge displayClk) begin
+        col_pos <=  distance_cm/10; //every 10 cm display 1 col on dotmatri
+        case(col_pos)
+            4'b0000 : tmpcol <= 5'b00000;
+            4'b0001 : tmpcol <= 5'b00001;
+            4'b0010 : tmpcol <= 5'b00011;
+            4'b0011 : tmpcol <= 5'b00111;
+            4'b0100 : tmpcol <= 5'b01111;
+            4'b0101 : tmpcol <= 5'b11111;
+            default : tmpcol <= 5'b00000;
+        endcase
+        case(row_pos)
+            4'd0 : store_col_pos_with_row0 <= tmpcol;
+            4'd1 : store_col_pos_with_row1 <= tmpcol;
+            4'd2 : store_col_pos_with_row2 <= tmpcol;
+            4'd3 : store_col_pos_with_row3 <= tmpcol;
+            4'd4 : store_col_pos_with_row4 <= tmpcol;
+            4'd5 : store_col_pos_with_row5 <= tmpcol;
+            4'd6 : store_col_pos_with_row6 <= tmpcol;
+        endcase
+        if(cnt <= 6) cnt <= 0;
+        case(row_pos)
+            4'd0 : col <= store_col_pos_with_row0;
+            4'd1 : col <= store_col_pos_with_row1;
+            4'd2 : col <= store_col_pos_with_row2;
+            4'd3 : col <= store_col_pos_with_row3;
+            4'd4 : col <= store_col_pos_with_row4;
+            4'd5 : col <= store_col_pos_with_row5;
+            4'd6 : col <= store_col_pos_with_row6;
+        endcase
+        case(cnt)
+            4'd0 : row <= 7'b1000000;
+            4'd1 : row <= 7'b0100000;
+            4'd2 : row <= 7'b0010000;
+            4'd3 : row <= 7'b0001000;
+            4'd4 : row <= 7'b0000100;
+            4'd5 : row <= 7'b0000010;
+            4'd6 : row <= 7'b0000001;
+            default : row <= 7'b0000000;
+        endcase
+        cnt <= cnt + 1;
+      end
 
-    always @ (*)
-        begin
-            col_pos <=  distance_cm/10; //every 10 cm display 1 col on dotmatrix
-
-            case(col_pos)
-                4'b0000 : col = 5'b00000;
-                4'b0001 : col = 5'b00001;
-                4'b0010 : col = 5'b00011;
-                4'b0011 : col = 5'b00111;
-                4'b0100 : col = 5'b01111;
-                4'b0101 : col = 5'b11111;
-                default : col = 5'b00000;
-            endcase
-              case(row_pos)
-                4'd0 : row = 7'b1000000;
-                4'd1 : row = 7'b0100000;
-                4'd2 : row = 7'b0010000;
-                4'd3 : row = 7'b0001000;
-                4'd4 : row = 7'b0000100;
-                4'd5 : row = 7'b0000010;
-                4'd6 : row = 7'b0000001;
-                default : row = 7'b0000000;
-            endcase
-            row = ~row;
-        end
 endmodule
 //pluse generator for trigger pin at ultrasonic sensor (HC-SR04)
 module trigger_cnt(clk,tk);

@@ -4,7 +4,7 @@
 //Tool Version: V1.9.10.03 (64-bit)
 //Part Number: GW1NSR-LV4CQN48PC7/I6
 //Device: GW1NSR-4C
-//Created Time: Thu 11 21 23:04:15 2024
+//Created Time: Sat 12 14 13:40:46 2024
 
 IO_LOC "sound" 28;
 IO_PORT "sound" IO_TYPE=LVCMOS25 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=2.5;

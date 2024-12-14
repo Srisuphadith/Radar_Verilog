@@ -1,26 +1,39 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v'
-Compiling module 'main'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":8)
-Compiling module 'trigger_cnt'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":96)
-WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":114)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":125)
-Compiling module 'echo_cnt'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":138)
-WARN  (EX3791) : Expression size 19 truncated to fit in target size 18("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":160)
-Compiling module 'distance_cal'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":180)
-WARN  (EX3791) : Expression size 51 truncated to fit in target size 7("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":194)
-Compiling module 'display'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":60)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 4("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":71)
-Compiling module 'servo'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":199)
-WARN  (EX3791) : Expression size 22 truncated to fit in target size 21("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":209)
-WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":221)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 20("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":227)
-WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":237)
-WARN  (EX3791) : Expression size 21 truncated to fit in target size 20("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":243)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":255)
-Compiling module 'speaker'("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":30)
-WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":41)
-WARN  (EX3791) : Expression size 31 truncated to fit in target size 30("C:\Users\niner\Desktop\VDHL_RADAR\src\radar_controller.v":46)
+Analyzing Verilog file 'F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v'
+Compiling module 'main'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":8)
+Compiling module 'trigger_cnt'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":146)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":164)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":175)
+Compiling module 'echo_cnt'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":188)
+WARN  (EX3791) : Expression size 19 truncated to fit in target size 18("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":210)
+Compiling module 'distance_cal'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":230)
+WARN  (EX3791) : Expression size 51 truncated to fit in target size 7("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":244)
+Compiling module 'display'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":83)
+WARN  (EX3778) : Edge of vector 'displayClk' is only sensitive to the least significant bit("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":101)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 4("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":102)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":123)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":124)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":125)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":126)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":127)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":128)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":129)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":141)
+WARN  (EX3670) : Actual bit length 1 differs from formal bit length 7 for port 'displayClk'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":25)
+Compiling module 'servo'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":249)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 21("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":259)
+WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":271)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 20("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":277)
+WARN  (EX3791) : Expression size 28 truncated to fit in target size 27("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":287)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 20("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":293)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":305)
+Compiling module 'speaker'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":32)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":43)
+WARN  (EX3791) : Expression size 31 truncated to fit in target size 30("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":48)
+WARN  (EX3771) : Module instantiation should have an instance name("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":28)
+Compiling module 'displayClk'("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":62)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("F:\Radar_VHDL\gowin\VDHL_RADAR\src\radar_controller.v":74)
 NOTE  (EX0101) : Current top module is "main"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
@@ -38,6 +51,6 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-[95%] Generate netlist file "C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg" completed
-[100%] Generate report file "C:\Users\niner\Desktop\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR_syn.rpt.html" completed
+[95%] Generate netlist file "F:\Radar_VHDL\gowin\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR.vg" completed
+[100%] Generate report file "F:\Radar_VHDL\gowin\VDHL_RADAR\impl\gwsynthesis\VDHL_RADAR_syn.rpt.html" completed
 GowinSynthesis finish
