@@ -12,7 +12,7 @@
     "InstLine" : 22,
     "InstName" : "cv",
     "ModuleFile" : "F:/Radar_VHDL/gowin/VDHL_RADAR/src/radar_controller.v",
-    "ModuleLine" : 146,
+    "ModuleLine" : 133,
     "ModuleName" : "trigger_cnt"
    },
    {
@@ -20,7 +20,7 @@
     "InstLine" : 23,
     "InstName" : "count_t",
     "ModuleFile" : "F:/Radar_VHDL/gowin/VDHL_RADAR/src/radar_controller.v",
-    "ModuleLine" : 188,
+    "ModuleLine" : 175,
     "ModuleName" : "echo_cnt"
    },
    {
@@ -28,7 +28,7 @@
     "InstLine" : 24,
     "InstName" : "dis",
     "ModuleFile" : "F:/Radar_VHDL/gowin/VDHL_RADAR/src/radar_controller.v",
-    "ModuleLine" : 230,
+    "ModuleLine" : 217,
     "ModuleName" : "distance_cal"
    },
    {
@@ -44,7 +44,7 @@
     "InstLine" : 26,
     "InstName" : "ser",
     "ModuleFile" : "F:/Radar_VHDL/gowin/VDHL_RADAR/src/radar_controller.v",
-    "ModuleLine" : 249,
+    "ModuleLine" : 236,
     "ModuleName" : "servo"
    },
    {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="main" T_Register="265(0)" T_Alu="189(0)" T_Lut="884(0)" T_MULT18X18="1(0)" T_MULTALU36X18="1(0)">
- <SubModule name="cv" Register="35" Alu="9" Lut="51" T_Register="35(35)" T_Alu="9(9)" T_Lut="51(51)"/>
- <SubModule name="count_t" Register="19" Lut="32" T_Register="19(19)" T_Lut="32(32)"/>
- <SubModule name="dis" Register="6" Lut="502" MULTALU36X18="1" T_Register="6(6)" T_Lut="502(502)" T_MULTALU36X18="1(1)"/>
- <SubModule name="dot" Register="60" Lut="237" T_Register="60(60)" T_Lut="237(237)"/>
+<Module name="main" T_Register="265(0)" T_Alu="189(0)" T_Lut="864(0)" T_MULT18X18="1(0)" T_MULTALU36X18="1(0)">
+ <SubModule name="cv" Register="35" Alu="9" Lut="52" T_Register="35(35)" T_Alu="9(9)" T_Lut="52(52)"/>
+ <SubModule name="count_t" Register="19" Lut="31" T_Register="19(19)" T_Lut="31(31)"/>
+ <SubModule name="dis" Register="6" Lut="542" MULTALU36X18="1" T_Register="6(6)" T_Lut="542(542)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="dot" Register="60" Lut="177" T_Register="60(60)" T_Lut="177(177)"/>
  <SubModule name="ser" Register="69" Alu="85" Lut="35" T_Register="69(69)" T_Alu="85(85)" T_Lut="35(35)"/>
  <SubModule name="sp" Register="48" Alu="70" Lut="16" MULT18X18="1" T_Register="48(48)" T_Alu="70(70)" T_Lut="16(16)" T_MULT18X18="1(1)"/>
  <SubModule name="i4" Register="28" Alu="25" Lut="11" T_Register="28(28)" T_Alu="25(25)" T_Lut="11(11)"/>

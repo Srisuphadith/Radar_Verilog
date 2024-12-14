@@ -40,7 +40,7 @@ module speaker(
     always @ (posedge clk)
         begin 
             //generate signal 440 Hz
-            if(cnt < 61405) cnt <= cnt+1;
+            if(cnt < 37500) cnt <= cnt+1;
             else
             cnt <= 0;
 
@@ -67,7 +67,7 @@ module displayClk(
     reg toggle = 0;
 
     always @(posedge clk) begin
-        if (cnt == 13500000) begin
+        if (cnt == 9375) begin
             cnt <= 0;
             toggle <= ~toggle;  // Toggle the clock output
         end else begin
@@ -90,7 +90,7 @@ module display(
 );
     reg [3:0] col_pos;
     reg[3:0] cnt;
-    reg[5:0] store_col_pos_with_row [0:6];
+    reg[4:0] store_col_pos_with_row [0:6];
     reg  [4:0] tmpcol;
       always @ (posedge displayClk) begin
         col_pos <=  distance_cm/10; //every 10 cm display 1 col on dotmatri
@@ -104,25 +104,26 @@ module display(
             default : tmpcol <= 5'b00000;
         endcase
         case(row_pos)
-            4'd0 : store_col_pos_with_row[0] <= tmpcol;
-            4'd1 : store_col_pos_with_row[1] <= tmpcol;
-            4'd2 : store_col_pos_with_row[2] <= tmpcol;
-            4'd3 : store_col_pos_with_row[3] <= tmpcol;
-            4'd4 : store_col_pos_with_row[4] <= tmpcol;
-            4'd5 : store_col_pos_with_row[5] <= tmpcol;
-            4'd6 : store_col_pos_with_row[6] <= tmpcol;
+            5'd0 : store_col_pos_with_row[0] <= tmpcol;
+            5'd1 : store_col_pos_with_row[1] <= tmpcol;
+            5'd2 : store_col_pos_with_row[2] <= tmpcol;
+            5'd3 : store_col_pos_with_row[3] <= tmpcol;
+            5'd4 : store_col_pos_with_row[4] <= tmpcol;
+            5'd5 : store_col_pos_with_row[5] <= tmpcol;
+            5'd6 : store_col_pos_with_row[6] <= tmpcol;
         endcase
-        if(cnt <= 6) cnt <= 0;
+        if(cnt >= 6) cnt <= 0;
         case(cnt)
-            4'd0 : row <= 7'b1000000;
-            4'd1 : row <= 7'b0100000;
-            4'd2 : row <= 7'b0010000;
-            4'd3 : row <= 7'b0001000;
-            4'd4 : row <= 7'b0000100;
-            4'd5 : row <= 7'b0000010;
-            4'd6 : row <= 7'b0000001;
-            default : row <= 7'b0000000;
+            4'd0 : row <= 7'b0111111;
+            4'd1 : row <= 7'b1011111;
+            4'd2 : row <= 7'b1101111;
+            4'd3 : row <= 7'b1110111;
+            4'd4 : row <= 7'b1111011;
+            4'd5 : row <= 7'b1111101;
+            4'd6 : row <= 7'b1111110;
+            default : row <= 7'b1111111;
         endcase
+        //row <= ~row;
         col <= store_col_pos_with_row[cnt];
         cnt <= cnt + 1;
       end
