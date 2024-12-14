@@ -67,7 +67,7 @@ module displayClk(
     reg toggle = 0;
 
     always @(posedge clk) begin
-        if (cnt == 56250) begin
+        if (cnt == 13500000) begin
             cnt <= 0;
             toggle <= ~toggle;  // Toggle the clock output
         end else begin
