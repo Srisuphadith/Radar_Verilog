@@ -88,15 +88,9 @@ module display(
     input [3:0] row_pos,
     input [6:0] displayClk
 );
-       reg [3:0] col_pos;
+    reg [3:0] col_pos;
     reg[3:0] cnt;
-    reg[5:0] store_col_pos_with_row0;
-    reg[5:0] store_col_pos_with_row1;
-    reg[5:0] store_col_pos_with_row2;
-    reg[5:0] store_col_pos_with_row3;
-    reg[5:0] store_col_pos_with_row4;
-    reg[5:0] store_col_pos_with_row5;
-    reg[5:0] store_col_pos_with_row6;
+    reg[5:0] store_col_pos_with_row [0:6];
     reg  [4:0] tmpcol;
       always @ (posedge displayClk) begin
         col_pos <=  distance_cm/10; //every 10 cm display 1 col on dotmatri
@@ -110,24 +104,15 @@ module display(
             default : tmpcol <= 5'b00000;
         endcase
         case(row_pos)
-            4'd0 : store_col_pos_with_row0 <= tmpcol;
-            4'd1 : store_col_pos_with_row1 <= tmpcol;
-            4'd2 : store_col_pos_with_row2 <= tmpcol;
-            4'd3 : store_col_pos_with_row3 <= tmpcol;
-            4'd4 : store_col_pos_with_row4 <= tmpcol;
-            4'd5 : store_col_pos_with_row5 <= tmpcol;
-            4'd6 : store_col_pos_with_row6 <= tmpcol;
+            4'd0 : store_col_pos_with_row[0] <= tmpcol;
+            4'd1 : store_col_pos_with_row[1] <= tmpcol;
+            4'd2 : store_col_pos_with_row[2] <= tmpcol;
+            4'd3 : store_col_pos_with_row[3] <= tmpcol;
+            4'd4 : store_col_pos_with_row[4] <= tmpcol;
+            4'd5 : store_col_pos_with_row[5] <= tmpcol;
+            4'd6 : store_col_pos_with_row[6] <= tmpcol;
         endcase
         if(cnt <= 6) cnt <= 0;
-        case(row_pos)
-            4'd0 : col <= store_col_pos_with_row0;
-            4'd1 : col <= store_col_pos_with_row1;
-            4'd2 : col <= store_col_pos_with_row2;
-            4'd3 : col <= store_col_pos_with_row3;
-            4'd4 : col <= store_col_pos_with_row4;
-            4'd5 : col <= store_col_pos_with_row5;
-            4'd6 : col <= store_col_pos_with_row6;
-        endcase
         case(cnt)
             4'd0 : row <= 7'b1000000;
             4'd1 : row <= 7'b0100000;
@@ -138,10 +123,11 @@ module display(
             4'd6 : row <= 7'b0000001;
             default : row <= 7'b0000000;
         endcase
+        col <= store_col_pos_with_row[cnt];
         cnt <= cnt + 1;
       end
-
 endmodule
+
 //pluse generator for trigger pin at ultrasonic sensor (HC-SR04)
 module trigger_cnt(clk,tk);
 input clk;
